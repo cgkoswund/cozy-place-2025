@@ -1,13 +1,17 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import BaseCanvas from "~/components/canvas/BaseCanvas";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Cozy cat room" },
+    { name: "description", content: "Cozy purr and chill" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <>
+      <BaseCanvas />
+    </>
+  );
 }
